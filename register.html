@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!-- Страница регистрации -->
+    <header>
+        <div class="container">
+            <h1>Сервис уборки помещений</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="registration">
+            <div class="container">
+                <h2>Регистрация нового пользователя</h2>
+                <form action="#" method="post" class="registration-form" id="registrationForm">
+                    <label for="username">Логин:</label>
+                    <input type="text" id="username" name="username" required placeholder="Введите уникальный логин">
+
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required minlength="12" placeholder="Минимум 12 символов">
+
+                    <label for="fullname">ФИО:</label>
+                    <input type="text" id="fullname" name="fullname" required pattern="" placeholder="Введите ФИО">
+
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="\+7" placeholder="+7(XXX)-XXX-XX-XX">
+
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите адрес электронной почты">
+
+                    <button type="submit" class="button">Зарегистрироваться</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Сервис уборки помещений. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Валидация пароля (показ/скрытие символов)
+        const passwordField = document.getElementById('password');
+        passwordField.addEventListener('input', function() {
+            if (passwordField.value.length < 12) {
+                passwordField.setCustomValidity('Пароль должен быть не менее 12 символов.');
+            } else {
+                passwordField.setCustomValidity('');
+            }
+        });
+    </script>
+</body>
+</html>

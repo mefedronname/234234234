@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.order-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.order-form {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+.order-form h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.order-form .form-group {
+  margin-bottom: 15px;
+}
+.order-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 14px;
+}
+.order-form .form-group input,
+.order-form .form-group select,
+.order-form .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  font-size: 14px;
+}
+.order-form .form-group input:focus,
+.order-form .form-group select:focus,
+.order-form .form-group textarea:focus {
+  outline: none;
+  border-color: #b2ebf2;
+}
+.order-form .form-group textarea {
+  resize: vertical;
+}
+.order-form .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+.order-form .button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.order-form .button-group button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+.order-form .button-group button.cancel:hover {
+  background-color: #ea1c0d;
+}
+.order-form .button-group button.reset {
+  background-color: #ccc;
+  color: white;
+}
+.order-form .button-group button.reset:hover {
+  background-color: #b3b3b3;
+}
+.order-form .button-group button.submit {
+  background-color: #4CAF50;
+  color: white;
+}
+.order-form .button-group button.submit:hover {
+  background-color: #3d8b40;
+}
+.order-form .success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  text-align: center;
+}

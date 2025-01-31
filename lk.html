@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="lk.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Личный кабинет</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="profile.html">Профиль</a></li>
+                    <li><a href="new.html">Новый заказ</a></li>
+                    <li><a href="index.html">Выход</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div class="container">
+                <h2>Добро пожаловать, <span id="user-name">Иван Иванов</span>!</h2>
+            </div>
+        </section>
+
+        <section class="orders">
+            <div class="container">
+                <h2>Ваши заказы</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Дата создания</th>
+                            <th>Дата выполнения</th>
+                            <th>Адрес</th>
+                            <th>Тип услуги</th>
+                            <th>Статус</th>
+                            <th>Комментарий</th>
+                            <th>Стоимость</th>
+                            <th>Оплачено</th>
+                            <th>Способ оплаты</th>
+                            <th>Доп. услуги</th>
+                            <th>Клиент</th>
+                            <th>Контакт</th>
+                            <th>Исполнитель</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>01.02.2025</td>
+                            <td>02.02.2025</td>
+                            <td>ул. Ленина, 12</td>
+                            <td>Генеральная уборка</td>
+                            <td>Выполнено</td>
+                            <td>Все хорошо</td>
+                            <td>3000 руб.</td>
+                            <td>Да</td>
+                            <td>Карта</td>
+                            <td>Мойка окон</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 (900) 123-45-67</td>
+                            <td>Иван Сидоров</td>
+                            <td><button class="delete">Удалить</button></td>
+                        </tr>
+                        <!-- Другие заказы -->
+                    </tbody>
+                </table>
+                <button class="print">Распечатать</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Сервис уборки помещений. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Функция для удаления заказа
+        document.querySelectorAll(".delete").forEach(button => {
+            button.addEventListener("click", function () {
+                const row = this.closest("tr"); // Найти строку, где находится кнопка
+                row.remove(); // Удалить строку из таблицы
+            });
+        });
+
+        // Функция для печати таблицы
+        document.querySelector(".print").addEventListener("click", function () {
+            window.print();
+        });
+    });
+</script>
+
+</html>

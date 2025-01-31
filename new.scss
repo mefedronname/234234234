@@ -1,0 +1,134 @@
+// Переменные
+$primary-color: #4CAF50;
+$secondary-color: #f44336;
+$background-color: #f9f9f9;
+$text-color: #333;
+$input-border-color: #ccc;
+$input-focus-color: #b2ebf2;
+$form-background-color: #fff;
+$form-border-color: #ddd;
+$form-border-radius: 8px;
+$form-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$form-padding: 20px;
+$form-max-width: 500px;
+$success-message-background: #d4edda;
+$success-message-text: #155724;
+$success-message-border: #c3e6cb;
+
+// Основной стиль страницы
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.order-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.order-form {
+    background-color: $form-background-color;
+    padding: $form-padding;
+    max-width: $form-max-width;
+    border-radius: $form-border-radius;
+    box-shadow: $form-shadow;
+    border: 1px solid $form-border-color;
+
+    h2 {
+        color: $text-color;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: $text-color;
+            font-size: 14px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid $input-border-color;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+            font-size: 14px;
+
+            &:focus {
+                outline: none;
+                border-color: $input-focus-color;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+
+            &.cancel {
+                background-color: $secondary-color;
+                color: white;
+
+                &:hover {
+                    background-color: darken($secondary-color, 10%);
+                }
+            }
+
+            &.reset {
+                background-color: #ccc;
+                color: white;
+
+                &:hover {
+                    background-color: darken(#ccc, 10%);
+                }
+            }
+
+            &.submit {
+                background-color: $primary-color;
+                color: white;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    .success-message {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: $success-message-background;
+        color: $success-message-text;
+        border: 1px solid $success-message-border;
+        border-radius: 4px;
+        text-align: center;
+    }
+}

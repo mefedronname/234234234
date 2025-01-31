@@ -1,0 +1,151 @@
+// Переменные
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #f9f9f9;
+$error-color: #e74c3c;
+$font-stack: 'Arial', sans-serif;
+
+// Сброс стилей
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-stack;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 600px) {
+        padding: 10px;
+    }
+}
+
+header {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+header .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .menu li a:hover {
+    color: darken($secondary-color, 10%);
+}
+
+.registration {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 34px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
+}
+
+.registration h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $primary-color;
+    font-size: 1.5rem;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration-form label {
+    font-weight: bold;
+    color: $text-color;
+}
+
+.registration-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-form input:focus {
+    border-color: $primary-color;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.registration-form .button {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.registration-form .button:hover {
+    background: linear-gradient(135deg, darken($primary-color, 10%), darken($secondary-color, 10%));
+    transform: scale(1.05);
+}
+
+footer {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 3px solid $secondary-color;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Сообщения об ошибках */
+input:invalid {
+    border-color: $error-color;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.5);
+}
+
+input:invalid:focus {
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.7);
+}
